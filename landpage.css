@@ -1,0 +1,62 @@
+body{
+	background: url('im2.jpg') no-repeat;
+	background-size: cover;
+	font-family: fantasy;
+	color: white;
+}
+ul{
+	margin: 0px;
+	padding: 0px;
+	list-style: none;
+}
+ul li{
+	
+	float: left;
+	width: 250px;
+	height: 40px;
+	background-color: black;
+	opacity: .9;
+	line-height: 40px;
+	text-align: center;
+	font-size: 20px; 
+}
+ul li a{
+	font-family: fantasy;
+	text-decoration: none;
+	display: block;
+	color: red;
+}
+ul li a:hover{
+	cursor: pointer;
+	color: gray;
+	background-color: black;
+}
+ul li ul li{
+	display: none;
+	
+}
+ul li:hover ul li{
+	display: block;
+}
+p{
+	padding: 5px;
+	font-family: cursive;
+	font-size: 26px;
+	color:yellow;
+}
+.hello p{
+	font-family: serif;
+	font-size: 46px;
+	color:black;
+	font-variant:
+	font-style: italic;
+
+}
+.bal
+{
+	font-family: fantasy;
+	font-size: 26px;
+	color:black;
+	opacity: 0.7;
+}
+

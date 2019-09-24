@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <title>Sign-up</title>
+
+    <link rel="stylesheet" href="style.css" media="screen" type="text/css" />
+
+</head>
+<SCRIPT LANGUAGE="JavaScript">
+function checksign(form){
+    var count,c=-1;
+    for(count=0;count<2;count++)
+    {
+        if(form.type[count].checked)
+        {
+          c=0;
+          break;
+        }
+    }
+    if(c==0){
+      if(!count)
+      {
+        if(form.department.selectedIndex!=1)
+        {
+          alert("Please select the resepective depatment for admin\nPlease Re-Enter the values");
+          form.action="signup.html";
+        }
+      }
+      else
+      {
+        if(form.department.selectedIndex<2)
+        {
+          alert("Please select correct depatment\nPlease Re-Enter the values");
+          form.action="signup.html";
+        }
+      }
+    }
+    else{
+      alert("Please select Role")
+      form.action="signup.html";
+    }
+
+      if(form.pass.value!=form.cpass.value)
+      {
+        alert("Password Missmatch\nPlease Re-Enter the values");
+        form.action="signup.html";
+      }
+}</SCRIPT>
+<body>
+
+  <div class="login-card">
+    <h1><b><font color="black">Sign-up</h1><br></b></font>
+  <form name=signup" method="post" action="accountinsert.php">
+    <input type="text" name="name" placeholder="Name" required="required">
+  <input type="text" name="rid" placeholder="Register_Id" required="required">
+	<input type="text" name="email" placeholder="E-Mail Id" required="required">
+  <input type="text" id="mob" name="mobile_no" placeholder="Mobile No." required="required">
+    <input type="password" name="pass" placeholder="Password" required="required">
+	<input type="password" name="cpass" placeholder=" Confirm Password" required="required">
+  <b><p>Role:</b><input type="radio" name="type" value="ADMIN" required="required"> Admin
+<input type="radio" name="type" value="HOD"> HOD
+<b><p>Department:</b><select name="department" required="required">
+  <option selected hidden value="">---select---</option>
+  <option value="Admin">--FOR-ADMIN--</option>
+  <option value="C.S.E.">CSE</option>
+  <option value="MECH">MECH</option>
+  <option value="E.C.E.">ECE</option>
+  <option value="I.T.">IT</option>
+  <option value="CHEM">CHEM</option>
+  <option value="CIVIL">CIVIL</option>
+  <option value="E.E.E">EEE</option>
+  <option value="M.B.A">MBA</option>
+  <option value="SPORTS">SPORTS</option>
+  <option value="ENGLISH">ENGLISH</option>
+  <option value="T&P">T&P</option>
+</select></br></br></br>
+
+    <input type="submit" onsubmit="thank.html"  onClick="checksign(this.form)" name="login" class="login login-submit" value="Sign-up">
+  </form>
+</div>
+</body>
+
+</html>
